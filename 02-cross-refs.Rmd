@@ -2,6 +2,27 @@
 
 Cross-references make it easier for your readers to find and link to elements in your book.
 
+
+## Text reference
+
+(ref:foo) Define a text reference **here**. 
+
+- The syntax for a text reference is `(ref:label)` text, where `label` is a unique label throughout the document for text. 
+- It must be in a separate paragraph with empty lines above and below it. 
+- The paragraph must not be wrapped into multiple lines, and should not end with a white space.
+
+
+
+A normal paragraph.
+
+(ref:foo) A scatterplot of the data `cars` using **base** R graphics. 
+
+```{r foo, fig.cap='(ref:foo)'}
+plot(cars)  # a scatterplot
+```
+
+
+
 ## Chapters and sub-chapters
 
 There are two steps to cross-reference any heading:

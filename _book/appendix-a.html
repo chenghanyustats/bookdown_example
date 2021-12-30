@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>A Appendix A | MATH/COSC 3570 Data Science: A bookdown Example</title>
+  <meta name="description" content="This can be useful for search engine optimization (SEO). Note that it should be plain text without any Markdown formatting." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="A Appendix A | MATH/COSC 3570 Data Science: A bookdown Example" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This can be useful for search engine optimization (SEO). Note that it should be plain text without any Markdown formatting." />
+  <meta name="github-repo" content="chenghanyustats/bookdown" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="A Appendix A | MATH/COSC 3570 Data Science: A bookdown Example" />
+  
+  <meta name="twitter:description" content="This can be useful for search engine optimization (SEO). Note that it should be plain text without any Markdown formatting." />
+  
+
+<meta name="author" content="Cheng-Han Yu" />
+
+
+<meta name="date" content="2021-12-27" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="references.html"/>
+
+<script src="book_assets/header-attrs-2.11/header-attrs.js"></script>
+<script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="book_assets/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="book_assets/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="book_assets/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<link href="book_assets/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="book_assets/datatables-binding-0.18/datatables.js"></script>
+<link href="book_assets/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="book_assets/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="book_assets/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="book_assets/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="book_assets/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">MATH/COSC 3570 Data Science</a></li>
+<li><a href="./">A bookdown Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="part"><span><b>I Part I</b></span></li>
+<li class="chapter" data-level="" data-path="about.html"><a href="about.html"><i class="fa fa-check"></i>About</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="about.html"><a href="about.html#usage"><i class="fa fa-check"></i><b>0.1</b> Usage</a></li>
+<li class="chapter" data-level="0.2" data-path="about.html"><a href="about.html#render-book"><i class="fa fa-check"></i><b>0.2</b> Render book</a></li>
+<li class="chapter" data-level="0.3" data-path="about.html"><a href="about.html#preview-book"><i class="fa fa-check"></i><b>0.3</b> Preview book</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="hello-bookdown.html"><a href="hello-bookdown.html"><i class="fa fa-check"></i><b>1</b> Hello bookdown</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="hello-bookdown.html"><a href="hello-bookdown.html#a-section"><i class="fa fa-check"></i><b>1.1</b> A section</a>
+<ul>
+<li class="chapter" data-level="" data-path="hello-bookdown.html"><a href="hello-bookdown.html#an-unnumbered-section"><i class="fa fa-check"></i>An unnumbered section</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>2</b> Cross-references</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="cross.html"><a href="cross.html#text-reference"><i class="fa fa-check"></i><b>2.1</b> Text reference</a></li>
+<li class="chapter" data-level="2.2" data-path="cross.html"><a href="cross.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>2.2</b> Chapters and sub-chapters</a></li>
+<li class="chapter" data-level="2.3" data-path="cross.html"><a href="cross.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>2.3</b> Captioned figures and tables</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="parts.html"><a href="parts.html"><i class="fa fa-check"></i><b>3</b> Parts</a></li>
+<li class="chapter" data-level="4" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>4</b> Footnotes and citations</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>4.1</b> Footnotes</a></li>
+<li class="chapter" data-level="4.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>4.2</b> Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>5</b> Blocks</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>5.1</b> Equations</a></li>
+<li class="chapter" data-level="5.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>5.2</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="5.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>5.3</b> Callout blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>6</b> Sharing your book</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>6.1</b> Publishing</a></li>
+<li class="chapter" data-level="6.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>6.2</b> 404 pages</a></li>
+<li class="chapter" data-level="6.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>6.3</b> Metadata for sharing</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="part"><span><b>Part II</b></span></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="appendix-a.html"><a href="appendix-a.html"><i class="fa fa-check"></i><b>A</b> Appendix A</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="appendix-a.html"><a href="appendix-a.html#gitbook-style"><i class="fa fa-check"></i><b>A.1</b> GitBook style</a></li>
+<li class="chapter" data-level="A.2" data-path="appendix-a.html"><a href="appendix-a.html#single-document"><i class="fa fa-check"></i><b>A.2</b> Single document</a></li>
+<li class="chapter" data-level="A.3" data-path="appendix-a.html"><a href="appendix-a.html#configuration"><i class="fa fa-check"></i><b>A.3</b> Configuration</a></li>
+<li class="chapter" data-level="A.4" data-path="appendix-a.html"><a href="appendix-a.html#publishing-1"><i class="fa fa-check"></i><b>A.4</b> Publishing</a>
+<ul>
+<li class="chapter" data-level="A.4.1" data-path="appendix-a.html"><a href="appendix-a.html#rstudio-connect"><i class="fa fa-check"></i><b>A.4.1</b> <span>RStudio Connect</span></a></li>
+<li class="chapter" data-level="A.4.2" data-path="appendix-a.html"><a href="appendix-a.html#netlify-drop"><i class="fa fa-check"></i><b>A.4.2</b> Netlify Drop</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MATH/COSC 3570 Data Science: A bookdown Example</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="appendix-a" class="section level1" number="7">
+<h1><span class="header-section-number">A</span> Appendix A</h1>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="appendix-a.html#cb7-1" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(iris)</span></code></pre></div>
+<div id="htmlwidget-1a8ab924fe1f3518226c" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1a8ab924fe1f3518226c">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100","101","102","103","104","105","106","107","108","109","110","111","112","113","114","115","116","117","118","119","120","121","122","123","124","125","126","127","128","129","130","131","132","133","134","135","136","137","138","139","140","141","142","143","144","145","146","147","148","149","150"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9,5.4,4.8,4.8,4.3,5.8,5.7,5.4,5.1,5.7,5.1,5.4,5.1,4.6,5.1,4.8,5,5,5.2,5.2,4.7,4.8,5.4,5.2,5.5,4.9,5,5.5,4.9,4.4,5.1,5,4.5,4.4,5,5.1,4.8,5.1,4.6,5.3,5,7,6.4,6.9,5.5,6.5,5.7,6.3,4.9,6.6,5.2,5,5.9,6,6.1,5.6,6.7,5.6,5.8,6.2,5.6,5.9,6.1,6.3,6.1,6.4,6.6,6.8,6.7,6,5.7,5.5,5.5,5.8,6,5.4,6,6.7,6.3,5.6,5.5,5.5,6.1,5.8,5,5.6,5.7,5.7,6.2,5.1,5.7,6.3,5.8,7.1,6.3,6.5,7.6,4.9,7.3,6.7,7.2,6.5,6.4,6.8,5.7,5.8,6.4,6.5,7.7,7.7,6,6.9,5.6,7.7,6.3,6.7,7.2,6.2,6.1,6.4,7.2,7.4,7.9,6.4,6.3,6.1,7.7,6.3,6.4,6,6.9,6.7,6.9,5.8,6.8,6.7,6.7,6.3,6.5,6.2,5.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1,3.7,3.4,3,3,4,4.4,3.9,3.5,3.8,3.8,3.4,3.7,3.6,3.3,3.4,3,3.4,3.5,3.4,3.2,3.1,3.4,4.1,4.2,3.1,3.2,3.5,3.6,3,3.4,3.5,2.3,3.2,3.5,3.8,3,3.8,3.2,3.7,3.3,3.2,3.2,3.1,2.3,2.8,2.8,3.3,2.4,2.9,2.7,2,3,2.2,2.9,2.9,3.1,3,2.7,2.2,2.5,3.2,2.8,2.5,2.8,2.9,3,2.8,3,2.9,2.6,2.4,2.4,2.7,2.7,3,3.4,3.1,2.3,3,2.5,2.6,3,2.6,2.3,2.7,3,2.9,2.9,2.5,2.8,3.3,2.7,3,2.9,3,3,2.5,2.9,2.5,3.6,3.2,2.7,3,2.5,2.8,3.2,3,3.8,2.6,2.2,3.2,2.8,2.8,2.7,3.3,3.2,2.8,3,2.8,3,2.8,3.8,2.8,2.8,2.6,3,3.4,3.1,3,3.1,3.1,3.1,2.7,3.2,3.3,3,2.5,3,3.4,3],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5,1.5,1.6,1.4,1.1,1.2,1.5,1.3,1.4,1.7,1.5,1.7,1.5,1,1.7,1.9,1.6,1.6,1.5,1.4,1.6,1.6,1.5,1.5,1.4,1.5,1.2,1.3,1.4,1.3,1.5,1.3,1.3,1.3,1.6,1.9,1.4,1.6,1.4,1.5,1.4,4.7,4.5,4.9,4,4.6,4.5,4.7,3.3,4.6,3.9,3.5,4.2,4,4.7,3.6,4.4,4.5,4.1,4.5,3.9,4.8,4,4.9,4.7,4.3,4.4,4.8,5,4.5,3.5,3.8,3.7,3.9,5.1,4.5,4.5,4.7,4.4,4.1,4,4.4,4.6,4,3.3,4.2,4.2,4.2,4.3,3,4.1,6,5.1,5.9,5.6,5.8,6.6,4.5,6.3,5.8,6.1,5.1,5.3,5.5,5,5.1,5.3,5.5,6.7,6.9,5,5.7,4.9,6.7,4.9,5.7,6,4.8,4.9,5.6,5.8,6.1,6.4,5.6,5.1,5.6,6.1,5.6,5.5,4.8,5.4,5.6,5.1,5.1,5.9,5.7,5.2,5,5.2,5.4,5.1],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1,0.2,0.2,0.1,0.1,0.2,0.4,0.4,0.3,0.3,0.3,0.2,0.4,0.2,0.5,0.2,0.2,0.4,0.2,0.2,0.2,0.2,0.4,0.1,0.2,0.2,0.2,0.2,0.1,0.2,0.2,0.3,0.3,0.2,0.6,0.4,0.3,0.2,0.2,0.2,0.2,1.4,1.5,1.5,1.3,1.5,1.3,1.6,1,1.3,1.4,1,1.5,1,1.4,1.3,1.4,1.5,1,1.5,1.1,1.8,1.3,1.5,1.2,1.3,1.4,1.4,1.7,1.5,1,1.1,1,1.2,1.6,1.5,1.6,1.5,1.3,1.3,1.3,1.2,1.4,1.2,1,1.3,1.2,1.3,1.3,1.1,1.3,2.5,1.9,2.1,1.8,2.2,2.1,1.7,1.8,1.8,2.5,2,1.9,2.1,2,2.4,2.3,1.8,2.2,2.3,1.5,2.3,2,2,1.8,2.1,1.8,1.8,1.8,2.1,1.6,1.9,2,2.2,1.5,1.4,2.3,2.4,1.8,1.8,2.1,2.4,2.3,1.9,2.3,2.5,2.3,1.9,2,2.3,1.8],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="appendix-a.html#cb8-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_app</span>(<span class="st">&quot;https://yihui.shinyapps.io/miniUI/&quot;</span>,</span>
+<span id="cb8-2"><a href="appendix-a.html#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">height =</span> <span class="st">&quot;600px&quot;</span>)</span></code></pre></div>
+<iframe src="https://yihui.shinyapps.io/miniUI/?showcase=0" width="672" height="600px">
+</iframe>
+<div id="gitbook-style" class="section level2" number="7.1">
+<h2><span class="header-section-number">A.1</span> GitBook style</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="appendix-a.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gitbook</span>(<span class="at">fig_caption =</span> <span class="cn">TRUE</span>, <span class="at">number_sections =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb9-2"><a href="appendix-a.html#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">self_contained =</span> <span class="cn">FALSE</span>, <span class="at">anchor_sections =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb9-3"><a href="appendix-a.html#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">lib_dir =</span> <span class="st">&quot;libs&quot;</span>, <span class="at">global_numbering =</span> <span class="sc">!</span>number_sections,</span>
+<span id="cb9-4"><a href="appendix-a.html#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">pandoc_args =</span> <span class="cn">NULL</span>, ..., <span class="at">template =</span> <span class="st">&quot;default&quot;</span>,</span>
+<span id="cb9-5"><a href="appendix-a.html#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">split_by =</span> <span class="fu">c</span>(<span class="st">&quot;chapter&quot;</span>, <span class="st">&quot;chapter+number&quot;</span>, <span class="st">&quot;section&quot;</span>,</span>
+<span id="cb9-6"><a href="appendix-a.html#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;section+number&quot;</span>, <span class="st">&quot;rmd&quot;</span>, <span class="st">&quot;none&quot;</span>), <span class="at">split_bib =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb9-7"><a href="appendix-a.html#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">config =</span> <span class="fu">list</span>(), <span class="at">table_css =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb10-1"><a href="appendix-a.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="at">bookdown:</span><span class="fu">:gitbook</span><span class="kw">:</span></span>
+<span id="cb10-2"><a href="appendix-a.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">highlight</span><span class="kw">:</span><span class="at"> tango</span></span>
+<span id="cb10-3"><a href="appendix-a.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">config</span><span class="kw">:</span></span>
+<span id="cb10-4"><a href="appendix-a.html#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span></span>
+<span id="cb10-5"><a href="appendix-a.html#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">collapse</span><span class="kw">:</span><span class="at"> subsection</span></span>
+<span id="cb10-6"><a href="appendix-a.html#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">scroll_highlight</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb10-7"><a href="appendix-a.html#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">before</span><span class="kw">:</span><span class="at"> </span><span class="ch">null</span></span>
+<span id="cb10-8"><a href="appendix-a.html#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">after</span><span class="kw">:</span><span class="at"> </span><span class="ch">null</span></span>
+<span id="cb10-9"><a href="appendix-a.html#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toolbar</span><span class="kw">:</span></span>
+<span id="cb10-10"><a href="appendix-a.html#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">position</span><span class="kw">:</span><span class="at"> fixed</span><span class="co">  # static</span></span>
+<span id="cb10-11"><a href="appendix-a.html#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">edit </span><span class="kw">:</span><span class="at"> </span><span class="ch">null</span></span>
+<span id="cb10-12"><a href="appendix-a.html#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">download</span><span class="kw">:</span><span class="at"> </span><span class="ch">null</span></span>
+<span id="cb10-13"><a href="appendix-a.html#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">search</span><span class="kw">:</span></span>
+<span id="cb10-14"><a href="appendix-a.html#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">engine</span><span class="kw">:</span><span class="at"> lunr</span><span class="co"> # or fuse</span></span>
+<span id="cb10-15"><a href="appendix-a.html#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="co">      # options to control/tune search engine behavior (for</span></span>
+<span id="cb10-16"><a href="appendix-a.html#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="co">      # fuse.js, refer to https://fusejs.io/api/options.html)</span></span>
+<span id="cb10-17"><a href="appendix-a.html#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">options</span><span class="kw">:</span><span class="at"> </span><span class="ch">null</span></span>
+<span id="cb10-18"><a href="appendix-a.html#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">fontsettings</span><span class="kw">:</span></span>
+<span id="cb10-19"><a href="appendix-a.html#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> white</span></span>
+<span id="cb10-20"><a href="appendix-a.html#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">family</span><span class="kw">:</span><span class="at"> sans</span></span>
+<span id="cb10-21"><a href="appendix-a.html#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">size</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb10-22"><a href="appendix-a.html#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">sharing</span><span class="kw">:</span></span>
+<span id="cb10-23"><a href="appendix-a.html#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">facebook</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb10-24"><a href="appendix-a.html#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">github</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb10-25"><a href="appendix-a.html#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">twitter</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb10-26"><a href="appendix-a.html#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">linkedin</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb10-27"><a href="appendix-a.html#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">weibo</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb10-28"><a href="appendix-a.html#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">instapaper</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb10-29"><a href="appendix-a.html#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">vk</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb10-30"><a href="appendix-a.html#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">whatsapp</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb10-31"><a href="appendix-a.html#cb10-31" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">all</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">&#39;facebook&#39;</span><span class="kw">,</span><span class="at"> </span><span class="st">&#39;twitter&#39;</span><span class="kw">,</span><span class="at"> </span><span class="st">&#39;linkedin&#39;</span><span class="kw">,</span><span class="at"> </span><span class="st">&#39;weibo&#39;</span><span class="kw">,</span><span class="at"> </span><span class="st">&#39;instapaper&#39;</span><span class="kw">]</span></span>
+<span id="cb10-32"><a href="appendix-a.html#cb10-32" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">info</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div>
+<p>Top-level options</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb11-1"><a href="appendix-a.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb11-2"><a href="appendix-a.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;An Awesome Book&quot;</span></span>
+<span id="cb11-3"><a href="appendix-a.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;John Smith&quot;</span></span>
+<span id="cb11-4"><a href="appendix-a.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;This book introduces the ABC theory, and ...&quot;</span></span>
+<span id="cb11-5"><a href="appendix-a.html#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;https\://bookdown.org/john/awesome/&#39;</span></span>
+<span id="cb11-6"><a href="appendix-a.html#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="fu">github-repo</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;john/awesome&quot;</span></span>
+<span id="cb11-7"><a href="appendix-a.html#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">cover-image</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;images/cover.png&quot;</span></span>
+<span id="cb11-8"><a href="appendix-a.html#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">apple-touch-icon</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;touch-icon.png&quot;</span></span>
+<span id="cb11-9"><a href="appendix-a.html#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="fu">apple-touch-icon-size</span><span class="kw">:</span><span class="at"> </span><span class="dv">120</span></span>
+<span id="cb11-10"><a href="appendix-a.html#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="fu">favicon</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;favicon.ico&quot;</span></span>
+<span id="cb11-11"><a href="appendix-a.html#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<p>Although the <code>gitbook()</code> format was designed primarily for books, you can actually also apply it to a single R Markdown document. The only difference is that there will be no search button on the single page output.</p>
+<p>You may also want to set the option <code>split_by</code> to <code>none</code> to only generate a single output page, in which case there will not be any navigation buttons.</p>
+</div>
+<div id="single-document" class="section level2" number="7.2">
+<h2><span class="header-section-number">A.2</span> Single document</h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb12-1"><a href="appendix-a.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb12-2"><a href="appendix-a.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="at">  bookdown:</span><span class="fu">:html_document2</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb12-3"><a href="appendix-a.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="at">  bookdown:</span><span class="fu">:pdf_document2</span><span class="kw">:</span></span>
+<span id="cb12-4"><a href="appendix-a.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">keep_tex</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb12-5"><a href="appendix-a.html#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="at">  bookdown:</span><span class="fu">:word_document2</span><span class="kw">:</span></span>
+<span id="cb12-6"><a href="appendix-a.html#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div>
+</div>
+<div id="configuration" class="section level2" number="7.3">
+<h2><span class="header-section-number">A.3</span> Configuration</h2>
+<p>Stored in <code>_bookdown.yml</code> file</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb13-1"><a href="appendix-a.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">book_filename</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;my-book.Rmd&quot;</span></span>
+<span id="cb13-2"><a href="appendix-a.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">delete_merged_file</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb13-3"><a href="appendix-a.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">before_chapter_script</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;script1.R&quot;</span><span class="kw">,</span><span class="at"> </span><span class="st">&quot;script2.R&quot;</span><span class="kw">]</span></span>
+<span id="cb13-4"><a href="appendix-a.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">after_chapter_script</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;script3.R&quot;</span></span>
+<span id="cb13-5"><a href="appendix-a.html#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span><span class="kw">:</span><span class="at"> https://github.com/rstudio/bookdown-demo/blob/master/%s</span></span>
+<span id="cb13-6"><a href="appendix-a.html#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">edit</span><span class="kw">:</span><span class="at"> https://github.com/rstudio/bookdown-demo/edit/master/%s</span></span>
+<span id="cb13-7"><a href="appendix-a.html#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="fu">output_dir</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;book-output&quot;</span></span>
+<span id="cb13-8"><a href="appendix-a.html#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">clean</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;my-book.bbl&quot;</span><span class="kw">,</span><span class="at"> </span><span class="st">&quot;R-packages.bib&quot;</span><span class="kw">]</span></span></code></pre></div>
+</div>
+<div id="publishing-1" class="section level2" number="7.4">
+<h2><span class="header-section-number">A.4</span> Publishing</h2>
+<div id="rstudio-connect" class="section level3" number="7.4.1">
+<h3><span class="header-section-number">A.4.1</span> <a href="https://bookdown.org/connect/">RStudio Connect</a></h3>
+<p><code>publish_book()</code> in bookdown makes it simple to upload your book to <a href="https://bookdown.org" class="uri">https://bookdown.org</a>, which is a website provided by RStudio to host your books for free.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="appendix-a.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">publish_book</span>(<span class="at">name =</span> <span class="cn">NULL</span>, <span class="at">account =</span> <span class="cn">NULL</span>, <span class="at">server =</span> <span class="cn">NULL</span>,</span>
+<span id="cb14-2"><a href="appendix-a.html#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">render =</span> <span class="fu">c</span>(<span class="st">&quot;none&quot;</span>, <span class="st">&quot;local&quot;</span>, <span class="st">&quot;server&quot;</span>))</span></code></pre></div>
+<p>The first time you try to run <code>bookdown::publish_book()</code>, you will be asked to authorize <strong>bookdown</strong> to publish to your bookdown.org account.</p>
+<p>The only argument of <code>publish_book()</code> that you may want to touch is render. It determines whether you want to render the book before publishing. If you have run <code>render_book()</code> before, you do not need to change this argument, otherwise you may set it to <code>'local'</code></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="appendix-a.html#cb15-1" aria-hidden="true" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">publish_book</span>(<span class="at">render =</span> <span class="st">&#39;local&#39;</span>)</span></code></pre></div>
+<p>If you have set up your own RStudio Connect server, you can certainly publish the book to that server instead of bookdown.org.</p>
+</div>
+<div id="netlify-drop" class="section level3" number="7.4.2">
+<h3><span class="header-section-number">A.4.2</span> Netlify Drop</h3>
+<p>Netlify (<a href="https://netlify.com" class="uri">https://netlify.com</a>) is a platform that offers cloud hosting and serverless backend services for static websites. Netlify offers both free and paid tiers for service, but they also offer a service called Netlify Drop (<a href="https://app.netlify.com/drop" class="uri">https://app.netlify.com/drop</a>), which is a free publishing option that does not require a Netlify account to start. This option does not rely on your <strong>bookdown</strong> project being in a version-controlled repository. All you need is a <strong>bookdown</strong> project that you can build locally.</p>
+<div id="the-build-and-deploy-pipeline-sequence" class="section level4" number="7.4.2.1">
+<h4><span class="header-section-number">A.4.2.1</span> The build-and-deploy pipeline sequence</h4>
+<p>This publishing approach sets up the following flow of events:</p>
+<ol style="list-style-type: decimal">
+<li>You start with a local <strong>bookdown</strong> project.</li>
+<li>You build your book locally to an output directory of choice (<code>_book/</code> by default).</li>
+<li>You go to Netlify Drop (<a href="https://app.netlify.com/drop" class="uri">https://app.netlify.com/drop</a>), and drag &amp; drop the output directory into the Netlify browser-based user interface.</li>
+<li>You make changes to your book, rebuild locally, then drag &amp; drop the output directory again into Netlify to update.</li>
+</ol>
+<p>The above is an overview—read on for step-by-step instructions.</p>
+</div>
+<div id="before-you-begin" class="section level4" number="7.4.2.2">
+<h4><span class="header-section-number">A.4.2.2</span> Before you begin</h4>
+<p>Start with a local <strong>bookdown</strong> project. It does not need to be in GitHub or another version-controlled repository.</p>
+<p>If you do not have an existing book, you can create a simple <strong>bookdown</strong> HTML book to practice with instead. See Figure <a href="#fig:new-bs4-book"><strong>??</strong></a> for how to create a new book in RStudio, or use the function <code>bookdown::create_gitbook()</code> or <code>bookdown::create_bs4_book()</code> from your R console if you do not use RStudio.</p>
+</div>
+<div id="build-your-book" class="section level4" number="7.4.2.3">
+<h4><span class="header-section-number">A.4.2.3</span> Build your book</h4>
+<p>From your <strong>bookdown</strong> project, build your book locally using whichever method from Chapter <a href="#build-the-book"><strong>??</strong></a> you prefer.</p>
+</div>
+<div id="deploy-your-site" class="section level4" number="7.4.2.4">
+<h4><span class="header-section-number">A.4.2.4</span> Deploy your site</h4>
+<p>Go to Netlify Drop (<a href="https://app.netlify.com/drop">netlify.com/drop</a>), where you should see a box that tells you to “Drag and drop your site folder here.”</p>
+<p>Next, drag and drop the output directory from your <strong>bookdown</strong> project (<code>_book/</code> by default, unless you changed this in your <code>_bookdown.yml</code> file) into that box in your web browser. You should see your book deploy quickly with a random subdomain name of the form <code>https://random-word-12345.netlify.com</code>.</p>
+<p>You will also see a notice that unclaimed sites are deleted after 24 hours. You can sign up for a Netlify account to claim your site and keep it online permanently.</p>
+</div>
+<div id="optional-update-your-site" class="section level4" number="7.4.2.5">
+<h4><span class="header-section-number">A.4.2.5</span> <em>Optional: Update your site</em></h4>
+<p>After signing up for Netlify, you <em>can</em> update this kind of site, but it is a manual update. Go to Netlify.com and navigate to find your site, then click on “Deploys.” You should see a box as shown in Figure <a href="#fig:netlify-drag-drop"><strong>??</strong></a>, indicating you may drag and drop your site folder to update your site (you may need to scroll to the bottom of this page).</p>
+<p>Navigate to your site’s landing page on Netlify.com (<a href="https://app.netlify.com" class="uri">https://app.netlify.com</a>), click on Overview &gt; Site Settings. Under Site information, click on Change site name and update it to a name that you want. If you want to use your own domain instead of Netlify’s subdomain, please read the documentation at <a href="https://docs.netlify.com/domains-https/custom-domains/" class="uri">https://docs.netlify.com/domains-https/custom-domains/</a>.</p>
+<p>Note: Because every time you update your local version of the book, you need to manually upload the book to Netlify.</p>
+
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div class="csl-entry">
+Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.org/knitr/">http://yihui.org/knitr/</a>.
+</div>
+<div class="csl-entry">
+———. 2021. <em>Bookdown: Authoring Books and Technical Documents with r Markdown</em>. <a href="https://CRAN.R-project.org/package=bookdown">https://CRAN.R-project.org/package=bookdown</a>.
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="references.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/chenghanyustats/bookdown/edit/master/10-app-a.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub", "_main.mobi"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

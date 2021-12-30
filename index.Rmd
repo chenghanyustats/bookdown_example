@@ -1,21 +1,36 @@
 --- 
-title: "A Minimal Book Example"
-author: "John Doe"
+title: "MATH/COSC 3570 Data Science: A bookdown Example"
+author: "Cheng-Han Yu"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
+output:
+  bookdown::gitbook:
+    highlight: tango
+    lib_dir: "book_assets"
+  bookdown::pdf_book:
+    keep_tex: no
 documentclass: book
 bibliography: [book.bib, packages.bib]
+biblio-style: apalike
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  This is a minimal example of using the bookdown package to write a book.
-  The HTML output format for this example is bookdown::gitbook,
-  set in the _output.yml file.
+  This can be useful for search engine optimization (SEO). Note that it should be plain text without any Markdown formatting.
 link-citations: yes
-github-repo: rstudio/bookdown-demo
+github-repo: chenghanyustats/bookdown
 ---
 
-# About
+# Preface {-}
+
+In this book, we will introduce an interesting
+method.
+
+
+# (PART) Part I {-} 
+
+
+# About {-}
+Each R Markdown file must start immediately with the chapter title using the first-level heading, e.g., `# Chapter Title`.
 
 This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
 
@@ -26,6 +41,7 @@ Each **bookdown** chapter is an .Rmd file, and each .Rmd file can contain one (a
 Use second-level and higher headings within chapters like: `## A short section` or `### An even shorter section`.
 
 The `index.Rmd` file is required, and is also your first book chapter. It will be the homepage when you render the book.
+
 
 ## Render book
 
@@ -58,3 +74,4 @@ knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
 ```
+

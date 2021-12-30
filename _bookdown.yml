@@ -1,4 +1,7 @@
 delete_merged_file: true
+new_session: no
 language:
   ui:
     chapter_name: "Chapter "
+    
+    
